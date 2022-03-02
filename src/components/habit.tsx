@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from "@fortawesome/free-regular-svg-icons";
 import { faMinusSquare } from "@fortawesome/free-regular-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { HabitElement } from "./habitContainer";
+import { HabitElement } from "../app";
 
 type HabitProps = {
   habit: HabitElement;
