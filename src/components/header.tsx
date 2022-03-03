@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -6,7 +6,7 @@ type HeaderProps = {
   totalCount: number;
 };
 
-export default class Header extends Component<HeaderProps> {
+export default class Header extends PureComponent<HeaderProps> {
   render() {
     return (
       <header>

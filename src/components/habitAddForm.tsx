@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
 type HabitAddFormProps = {
   onAdd: (name: string) => void;
 };
 
-export default class HabitAddForm extends Component<HabitAddFormProps> {
+export default class HabitAddForm extends PureComponent<HabitAddFormProps> {
   private formRef = React.createRef<HTMLFormElement>();
   private inputRef = React.createRef<HTMLInputElement>();
 
