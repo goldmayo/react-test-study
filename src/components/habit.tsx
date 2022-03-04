@@ -17,6 +17,12 @@ type HabitState = {
 };
 
 export default class Habit extends Component<HabitProps, HabitState> {
+  componentDidMount() {
+    console.log(`habit : ${this.props.habit.name} mounted`);
+  }
+  componentWillUnmount() {
+    console.log(`habit : ${this.props.habit.name} unmount`);
+  }
   handleIncrement = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     this.props.onIncrement(this.props.habit);
