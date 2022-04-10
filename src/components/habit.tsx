@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from "@fortawesome/free-regular-svg-icons";
 import { faMinusSquare } from "@fortawesome/free-regular-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { HabitElement } from "../app";
+import { HabitElement } from "../service/habit_presenter";
 
 type HabitProps = {
   habit: HabitElement;
@@ -17,12 +17,6 @@ type HabitState = {
 };
 
 export default class Habit extends Component<HabitProps, HabitState> {
-  componentDidMount() {
-    console.log(`habit : ${this.props.habit.name} mounted`);
-  }
-  componentWillUnmount() {
-    console.log(`habit : ${this.props.habit.name} unmount`);
-  }
   handleIncrement = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     this.props.onIncrement(this.props.habit);
