@@ -23,27 +23,27 @@ const App = ({ presenter }: AppProps) => {
 
   const handleDecrement = useCallback(
     (habit: HabitElement) => {
-      presenter.handleDecrement(habit, setHabits);
+      presenter.decrement(habit, setHabits);
     },
     [presenter]
   );
 
   const handleDelete = useCallback(
     (habit: HabitElement) => {
-      presenter.handleDelete(habit, setHabits);
+      presenter.delete(habit, setHabits);
     },
     [presenter]
   );
 
   const handleAdd = useCallback(
     (name: string) => {
-      presenter.handleAdd(name, setHabits);
+      presenter.add(name, setHabits);
     },
     [presenter]
   );
 
   const handleReset = useCallback(() => {
-    presenter.handleReset(setHabits);
+    presenter.reset(setHabits);
   }, [presenter]);
 
   return (
