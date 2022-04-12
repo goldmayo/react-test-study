@@ -15,9 +15,11 @@ export interface HabitPresenterInterface {
 // Singleton
 export class HabitPresenter implements HabitPresenterInterface {
   private habits: HabitElement[];
+  private MAX_HABITS: number;
 
-  constructor(habits: HabitElement[]) {
+  constructor(habits: HabitElement[], maxHabits: number) {
     this.habits = habits;
+    this.MAX_HABITS = maxHabits;
   }
 
   getHabits = () => {
@@ -51,6 +53,9 @@ export class HabitPresenter implements HabitPresenterInterface {
   };
 
   add = (name: string, update: React.Dispatch<React.SetStateAction<HabitElement[]>>) => {
+    if (this.habits.length === this.MAX_HABITS) {
+      throw new Error(`number of habits does not over the ${this.MAX_HABITS}`);
+    }
     this.habits = [...this.habits, { id: uuidv4(), name: name, count: 0 }];
     update(this.habits);
   };

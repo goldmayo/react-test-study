@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Habit from "./habit";
 import { HabitElement } from "../service/habit_presenter";
-import HabitAddForm from "./habitAddForm";
+import HabitAddForm from "./habit_add_form/habitAddForm";
 
 type HabitContainerProps = {
   habits: HabitElement[];
