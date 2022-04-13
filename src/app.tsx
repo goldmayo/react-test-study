@@ -2,8 +2,8 @@ import React, { useState, useCallback } from "react";
 
 import { HabitPresenterInterface, HabitElement } from "./service/habit_presenter";
 
-import Header from "./components/header";
-import HabitContainer from "./components/habitContainer";
+import Header from "./components/header/header";
+import HabitContainer from "./components/habit_container/habitContainer";
 
 import "./app.css";
 
