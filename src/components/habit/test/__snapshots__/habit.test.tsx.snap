@@ -6,11 +6,13 @@ exports[`Habit component Render 1`] = `
 >
   <span
     className="habit-name"
+    title="habit-name"
   >
     studying
   </span>
   <span
     className="habit-count"
+    title="habit-count"
   >
     0
   </span>

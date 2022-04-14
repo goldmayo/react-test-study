@@ -1,5 +1,5 @@
 import React from "react";
-import { HabitElement } from "../../service/habit_presenter";
+import { HabitElement } from "../../app/service/habit_presenter";
 import Habit from "../habit/habit";
 import HabitAddForm from "../habit_add_form/habitAddForm";
 

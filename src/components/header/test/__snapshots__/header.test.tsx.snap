@@ -24,6 +24,7 @@ exports[`Header Render 1`] = `
   </span>
   <span
     className="header-count"
+    title="total-count"
   >
     4
   </span>

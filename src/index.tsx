@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
+import App from "./app/app";
+import { HabitPresenter } from "./app/service/habit_presenter";
+
 import "./index.css";
-import App from "./app";
-// import SimpleHabit from "./components/simpleHabit";
-import { HabitPresenter } from "./service/habit_presenter";
 
 const habitPresenter = new HabitPresenter(
   [
@@ -17,7 +18,6 @@ const habitPresenter = new HabitPresenter(
 ReactDOM.render(
   <React.StrictMode>
     <App presenter={habitPresenter} />
-    {/* <SimpleHabit /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -12,12 +12,11 @@ export interface HabitPresenterInterface {
   reset(update: React.Dispatch<React.SetStateAction<HabitElement[]>>): void;
 }
 
-// Singleton
 export class HabitPresenter implements HabitPresenterInterface {
   private habits: HabitElement[];
   private MAX_HABITS: number;
 
-  constructor(habits: HabitElement[], maxHabits: number) {
+  constructor(habits: HabitElement[], maxHabits: number = 10) {
     this.habits = habits;
     this.MAX_HABITS = maxHabits;
   }

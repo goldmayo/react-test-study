@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import TestRenderer from "react-test-renderer";
 
 import HabitContainer from "../habitContainer";
-import { HabitElement } from "../../../service/habit_presenter";
+import { HabitElement } from "../../../app/service/habit_presenter";
 
 describe("HabitContainer component", () => {
   let habits: HabitElement[];

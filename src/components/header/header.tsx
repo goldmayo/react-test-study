@@ -12,7 +12,9 @@ export default class Header extends PureComponent<HeaderProps> {
       <header>
         <FontAwesomeIcon className="header-logo" icon={faLeaf} />
         <span>Habit Tracker</span>
-        <span className="header-count">{this.props.totalCount}</span>
+        <span className="header-count" title="total-count">
+          {this.props.totalCount}
+        </span>
       </header>
     );
   }

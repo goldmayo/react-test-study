@@ -2,7 +2,7 @@ import TestRenderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 
 import Habit from "../habit";
-import { HabitElement } from "../../../service/habit_presenter";
+import { HabitElement } from "../../../app/service/habit_presenter";
 import userEvent from "@testing-library/user-event";
 
 describe("Habit component", () => {

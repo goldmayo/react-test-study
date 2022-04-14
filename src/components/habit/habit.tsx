@@ -1,5 +1,5 @@
 import React from "react";
-import { HabitElement } from "../../service/habit_presenter";
+import { HabitElement } from "../../app/service/habit_presenter";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from "@fortawesome/free-regular-svg-icons";
@@ -30,8 +30,12 @@ const Habit = ({ habit, onIncrement, onDecrement, onDelete }: HabitProps) => {
 
   return (
     <li className="habit">
-      <span className="habit-name">{name}</span>
-      <span className="habit-count">{count}</span>
+      <span className="habit-name" title="habit-name">
+        {name}
+      </span>
+      <span className="habit-count" title="habit-count">
+        {count}
+      </span>
       <button className="habit-button habit-increase" title="increment" onClick={handleIncrement}>
         <FontAwesomeIcon icon={faPlusSquare} />
       </button>
